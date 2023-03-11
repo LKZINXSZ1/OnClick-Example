@@ -7,7 +7,7 @@ button.setOnClickLister(new View.OnClickListener(){
   public void onClick(View p1){
   //Your Code
   }
-}
+});
 ```
 ---
 Basic method to make an OnClick event work, I hope I helped those who were having difficulties or doubts.
