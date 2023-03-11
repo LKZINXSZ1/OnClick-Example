@@ -12,5 +12,24 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Layout Create
+        LinearLayout linearLayout = new LinearLayout(getApplicationContext());
+        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
+        linearLayout.setGravity(Gravity.CENTER);
+        setContentView(linearLayout);
+
+        Button button = new Button(getApplicationContext());
+        button.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
+        button.setText("Click to get toast");
+        linearLayout.addView(button);
+
+        //OnClick
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Hello World", Toast.LENGTH_LONG);
+            }
+        });
+
     }
 }
