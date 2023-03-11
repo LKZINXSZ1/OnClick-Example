@@ -1,7 +1,7 @@
 # OnClick Code
 To do the onClick I used the following method:
 
-```
+```java
 button.setOnClickLister(new View.OnClickListener(){
   @Override
   public void onClick(View p1){
