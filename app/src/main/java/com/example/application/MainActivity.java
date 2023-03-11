@@ -20,14 +20,18 @@ public class MainActivity extends Activity {
 
         Button button = new Button(getApplicationContext());
         button.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
-        button.setText("Click to get toast");
+        button.setText("Click to get alert");
         linearLayout.addView(button);
 
         //OnClick
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Hello World", Toast.LENGTH_LONG);
+                AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                alertDialog.setTitle("Warning");
+                alertDialog.setMessage("Hello World");
+                alertDialog.show();
+
             }
         });
 
